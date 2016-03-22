@@ -9,12 +9,13 @@
     - franklinkim.git
     - franklinkim.users-oh-my-zsh
     - rvm_io.rvm1-ruby
+    - mats116.nginx
     - nbz4live.php-fpm
     - novuso.php-cli
     - tersmitten.composer
     - hashbangcode.imagemagick
     - franklinkim.htpasswd
-    - ffmpeg
+    - avconv
 
   tasks:
     - name: clone zsh syntax highlighting
@@ -44,6 +45,20 @@
     rvm1_install_path: '/home/{{ ansible_ssh_user }}/.rvm'
     rvm1_rubies:
       - 'ruby-2.3.0'
+
+    # Nginx
+    nginx_user: www-data
+
+    # PHP FPM
+    php_fpm_pools:
+     - name: www
+       listen.owner: www-data
+       listen.group: www-data
+       listen.mode: '0660'
+       user: www-data
+       group: www-data
+       listen: /var/run/php5-fpm.sock
+       chdir: /
 
     # Htpasswd
     # htpasswd:

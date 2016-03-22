@@ -24,6 +24,7 @@ That's it !
 - Git [![Git](https://img.shields.io/badge/galaxy-franklinkim.git-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/git)
 - ZSH / oh-my-zsh [![ZSH / oh-my-zsh](https://img.shields.io/badge/galaxy-franklinkim.users--oh--my--zsh-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/users-oh-my-zsh)
 - RVM / Ruby [![RVM / Ruby](https://img.shields.io/badge/galaxy-rvm_io.rvm1--ruby-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/rvm_io/rvm1-ruby)
+- Nginx [![Nginx](https://img.shields.io/badge/galaxy-mats116.nginx-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/mats116/nginx)
 - PHP CLI [![PHP CLI](https://img.shields.io/badge/galaxy-novuso.php--cli-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/novuso/php-cli/)
 - PHP FPM [![PHP FPM](https://img.shields.io/badge/galaxy-nbz4live.php--fpm-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/nbz4live/php-fpm/)
 - Composer [![Composer](https://img.shields.io/badge/galaxy-tersmitten.composer-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/tersmitten/composer/)
@@ -31,7 +32,7 @@ That's it !
 - Htpasswd [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/)
 
 ### TODO
-- Nginx
+- ~~Nginx~~
 - Passenger
 - MySQL
 - PostgreSQL
