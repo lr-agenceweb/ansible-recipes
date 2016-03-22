@@ -1,8 +1,9 @@
 - src: franklinkim.git
 - src: franklinkim.users-oh-my-zsh
 - src: rvm_io.rvm1-ruby
-- src: novuso.php-cli
+- src: mats116.nginx
 - src: nbz4live.php-fpm
+- src: novuso.php-cli
 - src: tersmitten.composer
 - src: hashbangcode.imagemagick
 - src: franklinkim.htpasswd
