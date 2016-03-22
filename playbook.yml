@@ -1,0 +1,53 @@
+---
+- name: Web server installation
+  hosts: web
+  remote_user: root
+  become: yes
+
+  roles:
+    - tools
+    - franklinkim.git
+    - franklinkim.users-oh-my-zsh
+    - rvm_io.rvm1-ruby
+    - nbz4live.php-fpm
+    - novuso.php-cli
+    - tersmitten.composer
+    - hashbangcode.imagemagick
+    - franklinkim.htpasswd
+    - ffmpeg
+
+  tasks:
+    - name: clone zsh syntax highlighting
+      git: >
+        repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest={{ user_home_directory }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    - name: Disable xdebug for php-cli
+      shell: php5dismod -s cli xdebug
+
+  vars:
+    # Default
+    user: vagrant
+    user_home_directory: '/home/{{ user }}'
+
+    # ZSH
+    users:
+      - username: '{{ user }}'
+        name: '{{ user }}'
+        authorized_keys: []
+        oh_my_zsh:
+          theme: agnoster
+          plugins: git zsh-syntax-highlighting
+
+    # RVM and Ruby
+    rvm1_rvm_version: 'stable'
+    rvm1_rvm_check_for_updates: True
+    rvm1_install_path: '/home/{{ ansible_ssh_user }}/.rvm'
+    rvm1_rubies:
+      - 'ruby-2.3.0'
+
+    # Htpasswd
+    # htpasswd:
+    #   - name: demo_ansible
+    #     users:
+    #       - { name: user1, password: secret1 }
+...

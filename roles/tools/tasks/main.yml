@@ -1,0 +1,7 @@
+---
+- name: Installation of various tools
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - htop
+    - unzip
+    - pydf
