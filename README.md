@@ -9,7 +9,7 @@ Install [Ansible](http://docs.ansible.com/ansible/intro_installation.html)
 Clone it: `git clone git@github.com:lr-agenceweb/ansible-recipes.git`  
 Go to the ansible folder: `cd ansible-recipes`  
 Edit the configuration variables as you wish  
-Load dependencies `(sudo) ansible-galaxy install -r requirements.yml`
+Load dependencies `(sudo) ansible-galaxy install -r requirements.yml`  
 Run `ansible-playbook playbook.yml`  
 That's it !  
 
