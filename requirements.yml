@@ -5,6 +5,7 @@
 - src: nbz4live.php-fpm
 - src: novuso.php-cli
 - src: tersmitten.composer
+- src: mjanser.mysql
 - src: mjanser.phpmyadmin
 - src: hashbangcode.imagemagick
 - src: franklinkim.htpasswd

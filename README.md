@@ -28,6 +28,7 @@ That's it !
 - PHP CLI [![PHP CLI](https://img.shields.io/badge/galaxy-novuso.php--cli-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/novuso/php-cli/)
 - PHP FPM [![PHP FPM](https://img.shields.io/badge/galaxy-nbz4live.php--fpm-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/nbz4live/php-fpm/)
 - Composer [![Composer](https://img.shields.io/badge/galaxy-tersmitten.composer-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/tersmitten/composer/)
+- MySQL [![MySQL](https://img.shields.io/badge/galaxy-mjanser.mysql-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/mysql/)
 - PhpMyAdmin [![PhpMyAdmin](https://img.shields.io/badge/galaxy-mjanser.phpmyadmin-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/phpmyadmin/)
 - ImageMagick [![ImageMagick](https://img.shields.io/badge/galaxy-hashbangcode.imagemagick-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/hashbangcode/imagemagick/)
 - Htpasswd [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/)
@@ -36,7 +37,6 @@ That's it !
 - ~~Nginx~~
 - ~~Passenger~~
 - ~~MySQL~~
-- PostgreSQL
 - Let's Encrypt
 - ~~PhpMyAdmin~~
 - Backup gem

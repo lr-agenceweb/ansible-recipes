@@ -12,11 +12,11 @@
     - nbz4live.php-fpm
     - novuso.php-cli
     - tersmitten.composer
-    - mysql
+    - mjanser.mysql
     - mjanser.phpmyadmin
     - hashbangcode.imagemagick
     - franklinkim.htpasswd
-    - avconv
+    # - avconv
     - tools
     - misc
 
@@ -56,10 +56,18 @@
        listen: '{{ php_fpm_socket }}'
        chdir: /
 
+    # MySQL
+    mysql_root_password: root
+    mysql_databases:
+      - name: ansible_demo
+        import_file: ~
+    mysql_users:
+      - name: ansible
+        password: ansible
+        privileges: "ansible_demo.*:ALL"
+
     # PhpMyAdmin
     phpmyadmin_server_host: localhost
     phpmyadmin_server_auth_type: config
-    phpmyadmin_server_user: root
-    phpmyadmin_server_password: root
     phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
 ...
