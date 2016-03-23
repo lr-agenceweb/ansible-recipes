@@ -3,6 +3,8 @@
 This project contains a list of ansible recipes to install on every web server
 
 ### Requirements
+Install [VirtualBox](https://www.virtualbox.org/)  
+Install [Vagrant](https://www.vagrantup.com/)  
 Install [Ansible](http://docs.ansible.com/ansible/intro_installation.html)  
 
 ### Usage
