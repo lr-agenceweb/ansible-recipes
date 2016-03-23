@@ -1,0 +1,8 @@
+---
+- name: clone zsh syntax highlighting
+  git: >
+    repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest={{ user_home_directory }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+- name: Disable xdebug for php-cli
+  shell: php5dismod -s cli xdebug

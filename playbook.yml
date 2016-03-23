@@ -5,7 +5,6 @@
   become: yes
 
   roles:
-    - tools
     - franklinkim.git
     - franklinkim.users-oh-my-zsh
     - rvm_io.rvm1-ruby
@@ -13,17 +12,13 @@
     - nbz4live.php-fpm
     - novuso.php-cli
     - tersmitten.composer
+    - mysql
+    - mjanser.phpmyadmin
     - hashbangcode.imagemagick
     - franklinkim.htpasswd
     - avconv
-
-  tasks:
-    - name: clone zsh syntax highlighting
-      git: >
-        repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
-        dest={{ user_home_directory }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-    - name: Disable xdebug for php-cli
-      shell: php5dismod -s cli xdebug
+    - tools
+    - misc
 
   vars:
     # Default
@@ -50,6 +45,7 @@
     nginx_user: www-data
 
     # PHP FPM
+    php_fpm_socket: /var/run/php5-fpm.sock
     php_fpm_pools:
      - name: www
        listen.owner: www-data
@@ -57,8 +53,15 @@
        listen.mode: '0660'
        user: www-data
        group: www-data
-       listen: /var/run/php5-fpm.sock
+       listen: '{{ php_fpm_socket }}'
        chdir: /
+
+
+    phpmyadmin_server_host: localhost
+    phpmyadmin_server_auth_type: config
+    phpmyadmin_server_user: root
+    phpmyadmin_server_password: root
+    phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
 
     # Htpasswd
     # htpasswd:
