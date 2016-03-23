@@ -1,7 +1,7 @@
 - src: franklinkim.git
 - src: franklinkim.users-oh-my-zsh
+- src: mtpereira.passenger
 - src: rvm_io.rvm1-ruby
-- src: mats116.nginx
 - src: nbz4live.php-fpm
 - src: novuso.php-cli
 - src: tersmitten.composer
