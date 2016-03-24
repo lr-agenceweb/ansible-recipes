@@ -1,6 +1,6 @@
 ---
 # Default
-user: vagrant
+user: deploy
 user_home_directory: '/home/{{ user }}'
 
 # ZSH
