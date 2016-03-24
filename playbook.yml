@@ -18,6 +18,7 @@
     - mjanser.phpmyadmin
     - hashbangcode.imagemagick
     - franklinkim.htpasswd
+    - williamyeh.nodejs
     # - avconv
     - tools
     - misc

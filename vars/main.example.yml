@@ -48,3 +48,6 @@ mysql_users:
 phpmyadmin_server_host: localhost
 phpmyadmin_server_auth_type: config
 phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
+
+# NodeJS
+nodejs_version: 5.9.0

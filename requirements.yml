@@ -7,5 +7,6 @@
 - src: tersmitten.composer
 - src: mjanser.mysql
 - src: mjanser.phpmyadmin
+- src: williamyeh.nodejs
 - src: hashbangcode.imagemagick
 - src: franklinkim.htpasswd
