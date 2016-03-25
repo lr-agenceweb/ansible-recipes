@@ -8,17 +8,21 @@
 
   roles:
     - franklinkim.git
+    - franklinkim.sudo
     - franklinkim.users-oh-my-zsh
     - mtpereira.passenger
-    - rvm_io.rvm1-ruby
+
+    - role: rvm_io.rvm1-ruby
+      become_user: '{{ user }}'
+
     - nbz4live.php-fpm
     - novuso.php-cli
     - tersmitten.composer
     - mjanser.mysql
     - mjanser.phpmyadmin
     - hashbangcode.imagemagick
-    - franklinkim.htpasswd
     - williamyeh.nodejs
+    - franklinkim.htpasswd
     # - avconv
     - tools
     - misc

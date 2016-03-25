@@ -1,4 +1,5 @@
 - src: franklinkim.git
+- src: franklinkim.sudo
 - src: franklinkim.users-oh-my-zsh
 - src: mtpereira.passenger
 - src: rvm_io.rvm1-ruby
