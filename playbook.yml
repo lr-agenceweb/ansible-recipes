@@ -36,9 +36,12 @@
     - hashbangcode.imagemagick
     # - avconv
 
+    # Timezone and locale
+    - franklinkim.timezone
+    - franklinkim.environment
+
     # Misc
     - franklinkim.htpasswd
-    - franklinkim.timezone
     - tools
     - misc
 ...

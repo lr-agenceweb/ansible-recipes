@@ -57,4 +57,7 @@ phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
 # NodeJS
 nodejs_version: 5.9.1
 
+# Timezone and locale
 timezone: 'Europe/Paris'
+environment_config:
+  LC_ALL: en_US.UTF-8

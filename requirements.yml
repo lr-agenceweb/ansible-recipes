@@ -12,3 +12,4 @@
 - src: hashbangcode.imagemagick
 - src: franklinkim.htpasswd
 - src: franklinkim.timezone
+- src: franklinkim.environment
