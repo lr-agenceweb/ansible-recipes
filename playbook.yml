@@ -32,7 +32,7 @@
     # NodeJS
     - williamyeh.nodejs
 
-    # Libraries
+    # Convert packages
     - hashbangcode.imagemagick
     # - avconv
 
