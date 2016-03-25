@@ -1,12 +1,17 @@
 ---
 # Default
-user: vagrant
+user: deploy
 user_home_directory: '/home/{{ user }}'
 
-# ZSH
+# Users and ZSH
+sudo_users:
+  - name: '{{ user }}'
+    nopasswd: yes
+
 users:
   - username: '{{ user }}'
     name: '{{ user }}'
+    groups: ['sudo']
     authorized_keys: []
     oh_my_zsh:
       theme: agnoster
@@ -48,3 +53,11 @@ mysql_users:
 phpmyadmin_server_host: localhost
 phpmyadmin_server_auth_type: config
 phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
+
+# NodeJS
+nodejs_version: 5.9.1
+
+# Timezone and locale
+timezone: 'Europe/Paris'
+environment_config:
+  LC_ALL: en_US.UTF-8

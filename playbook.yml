@@ -8,17 +8,40 @@
 
   roles:
     - franklinkim.git
+
+    # Users
+    - franklinkim.sudo
     - franklinkim.users-oh-my-zsh
+
+    # Nginx + Passenger
     - mtpereira.passenger
-    - rvm_io.rvm1-ruby
+
+    # Ruby
+    - role: rvm_io.rvm1-ruby
+      become_user: '{{ user }}'
+
+    # PHP
     - nbz4live.php-fpm
     - novuso.php-cli
     - tersmitten.composer
+
+    # MySQL
     - mjanser.mysql
     - mjanser.phpmyadmin
+
+    # NodeJS
+    - williamyeh.nodejs
+
+    # Convert packages
     - hashbangcode.imagemagick
-    - franklinkim.htpasswd
     # - avconv
+
+    # Timezone and locale
+    - franklinkim.timezone
+    - franklinkim.environment
+
+    # Misc
+    - franklinkim.htpasswd
     - tools
     - misc
 ...

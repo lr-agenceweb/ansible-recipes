@@ -33,8 +33,11 @@ That's it !
 - Composer [![Composer](https://img.shields.io/badge/galaxy-tersmitten.composer-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/tersmitten/composer/)
 - MySQL [![MySQL](https://img.shields.io/badge/galaxy-mjanser.mysql-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/mysql/)
 - PhpMyAdmin [![PhpMyAdmin](https://img.shields.io/badge/galaxy-mjanser.phpmyadmin-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/phpmyadmin/)
+- NodeJS [![NodeJS](https://img.shields.io/badge/galaxy-williamyeh.nodejs-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/williamyeh/nodejs/)
 - ImageMagick [![ImageMagick](https://img.shields.io/badge/galaxy-hashbangcode.imagemagick-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/hashbangcode/imagemagick/)
 - Htpasswd [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/)
+- Timezone [![Timezone](https://img.shields.io/badge/galaxy-franklinkim.timezone-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/timezone/)
+- Environment [![Environment](https://img.shields.io/badge/galaxy-franklinkim.environment-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/environment/)
 
 ### TODO
 - ~~Nginx~~
@@ -43,6 +46,6 @@ That's it !
 - Let's Encrypt
 - ~~PhpMyAdmin~~
 - Backup gem
-- NVM
-- Node
+- ~~NVM~~
+- ~~Node~~
 - Backup Manager

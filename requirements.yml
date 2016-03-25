@@ -1,4 +1,5 @@
 - src: franklinkim.git
+- src: franklinkim.sudo
 - src: franklinkim.users-oh-my-zsh
 - src: mtpereira.passenger
 - src: rvm_io.rvm1-ruby
@@ -7,5 +8,8 @@
 - src: tersmitten.composer
 - src: mjanser.mysql
 - src: mjanser.phpmyadmin
+- src: williamyeh.nodejs
 - src: hashbangcode.imagemagick
 - src: franklinkim.htpasswd
+- src: franklinkim.timezone
+- src: franklinkim.environment
