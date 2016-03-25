@@ -38,6 +38,7 @@
 
     # Misc
     - franklinkim.htpasswd
+    - franklinkim.timezone
     - tools
     - misc
 ...

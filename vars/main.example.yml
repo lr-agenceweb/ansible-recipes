@@ -56,3 +56,5 @@ phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
 
 # NodeJS
 nodejs_version: 5.9.1
+
+timezone: 'Europe/Paris'
