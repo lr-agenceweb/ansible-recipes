@@ -36,7 +36,7 @@ That's it !
 - NodeJS [![NodeJS](https://img.shields.io/badge/galaxy-williamyeh.nodejs-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/williamyeh/nodejs/)
 - ImageMagick [![ImageMagick](https://img.shields.io/badge/galaxy-hashbangcode.imagemagick-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/hashbangcode/imagemagick/)
 - Htpasswd [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/)
-- timezone [![timezone](https://img.shields.io/badge/galaxy-franklinkim.timezone-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/timezone/)
+- Timezone [![Timezone](https://img.shields.io/badge/galaxy-franklinkim.timezone-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/timezone/)
 - Environment [![Environment](https://img.shields.io/badge/galaxy-franklinkim.environment-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/environment/)
 
 ### TODO
