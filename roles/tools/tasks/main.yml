@@ -5,3 +5,4 @@
     - htop
     - unzip
     - pydf
+    - libgmp-dev # to install gems without errors
