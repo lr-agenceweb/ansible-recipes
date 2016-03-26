@@ -13,3 +13,7 @@
 - src: franklinkim.htpasswd
 - src: franklinkim.timezone
 - src: franklinkim.environment
+
+- name: elao.backup-manager
+  src: https://github.com/ElaoInfra/ansible-role-backup-manager
+  version: '1.0'

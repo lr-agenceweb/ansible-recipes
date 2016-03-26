@@ -40,6 +40,9 @@
     - franklinkim.timezone
     - franklinkim.environment
 
+    # Backup and save
+    - elao.backup-manager
+
     # Misc
     - franklinkim.htpasswd
     - tools
