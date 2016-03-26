@@ -36,9 +36,21 @@
     - hashbangcode.imagemagick
     # - avconv
 
+    # Cache
+    - geerlingguy.memcached
+
     # Timezone and locale
     - franklinkim.timezone
     - franklinkim.environment
+
+    # Backup and save
+    - elao.backup-manager
+
+    # Fix
+    - zsh-fix
+    - nginx-fix
+    - nanorc-fix
+    - gems-fix
 
     # Misc
     - franklinkim.htpasswd

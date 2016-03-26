@@ -1,0 +1,22 @@
+---
+# PHPMyAdmin
+- name: Include PHPMyAdmin location to default nginx vhost
+  lineinfile:
+    dest: /etc/nginx/sites-available/default
+    insertbefore: "# pass the PHP scripts"
+    line: "\tinclude /etc/nginx/global.d/phpmyadmin.conf;"
+  notify: nginx restart
+
+# Passenger
+- name: Uncomment Passenger root path
+  replace:
+    dest: /etc/nginx/nginx.conf
+    regexp: '# passenger_root'
+    replace: 'passenger_root'
+
+- name: Add Ruby Passenger path to vhost
+  lineinfile:
+    dest: /etc/nginx/nginx.conf
+    insertbefore: "# passenger_ruby"
+    line: "\tpassenger_ruby {{ rvm1_install_path }}/gems/{{ rvm1_rubies.0 }}/wrappers/ruby;"
+  notify: nginx restart

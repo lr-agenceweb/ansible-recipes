@@ -1,0 +1,5 @@
+---
+- name: Create .gemrc file with --no-rdoc and --no-ri options
+  template:
+    src: templates/.gemrc
+    dest: '{{ user_home_directory }}'
