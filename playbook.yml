@@ -46,7 +46,7 @@
     # Misc
     - franklinkim.htpasswd
     - nanorc-fix
-    - phpmyadmin-fix
+    - nginx-fix
     - zsh-fix
     - tools
     - misc
