@@ -1,0 +1,6 @@
+---
+- name: Add ll alias showing dotfiles to .zshrc
+  lineinfile:
+    dest: /home/{{ user }}/.zshrc
+    regexp: ^ll=
+    line: "\nalias ll='ls -ahlF'"
