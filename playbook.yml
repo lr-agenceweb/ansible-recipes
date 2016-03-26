@@ -43,11 +43,13 @@
     # Backup and save
     - elao.backup-manager
 
+    # Fix
+    - zsh-fix
+    - nginx-fix
+    - nanorc-fix
+
     # Misc
     - franklinkim.htpasswd
-    - nanorc-fix
-    - nginx-fix
-    - zsh-fix
     - tools
     - misc
 ...
