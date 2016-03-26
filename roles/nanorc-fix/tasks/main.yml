@@ -6,7 +6,8 @@
     force: no
 
 - name: Add colorization for conf file with nano editor
-  lineinfile:
+  blockinfile:
     dest: /etc/nanorc
-    regexp: conf.nanorc
-    line: "\n## Configuration files (catch-all syntax)\ninclude \"/usr/share/nano/conf.nanorc\""
+    block: |
+      ## Configuration files (catch-all syntax)
+      include "/usr/share/nano/conf.nanorc"
