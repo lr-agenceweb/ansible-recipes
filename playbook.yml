@@ -45,6 +45,7 @@
 
     # Misc
     - franklinkim.htpasswd
+    - nanorc-fix
     - tools
     - misc
 ...

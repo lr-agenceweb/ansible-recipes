@@ -1,0 +1,12 @@
+---
+- name: Upload conf file syntax highlighting for nano
+  template:
+    src: templates/nanorc/conf.nanorc
+    dest: /usr/share/nano/conf.nanorc
+    force: no
+
+- name: Add colorization for conf file with nano editor
+  lineinfile:
+    dest: /etc/nanorc
+    regexp: conf.nanorc
+    line: "\n## Configuration files (catch-all syntax)\ninclude \"/usr/share/nano/conf.nanorc\""
