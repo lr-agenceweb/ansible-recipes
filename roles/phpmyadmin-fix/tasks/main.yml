@@ -1,0 +1,13 @@
+---
+- name: Create symlink for phpmyadmin folder to nginx
+  file:
+    src: /usr/share/phpmyadmin
+    dest: /usr/share/nginx/html/phpmyadmin
+    state: link
+
+- name: Add phpmyadmin vhost for nginx
+  template:
+    src: templates/phpmyadmin/phpmyadmin.conf
+    dest: /etc/nginx/conf.d/phpmyadmin.conf
+    force: no
+  notify: nginx restart
