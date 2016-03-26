@@ -4,7 +4,7 @@
   lineinfile:
     dest: /etc/nginx/sites-available/default
     insertbefore: "# pass the PHP scripts"
-    line: "\t# include PHPMyAdmin location\n \tinclude /etc/nginx/global.d/phpmyadmin.conf;\n"
+    line: "\tinclude /etc/nginx/global.d/phpmyadmin.conf;"
   notify: nginx restart
 
 # Passenger
