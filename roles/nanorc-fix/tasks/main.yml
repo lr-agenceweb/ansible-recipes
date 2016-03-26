@@ -1,7 +1,7 @@
 ---
 - name: Upload conf file syntax highlighting for nano
   template:
-    src: templates/nanorc/conf.nanorc
+    src: templates/conf.nanorc
     dest: /usr/share/nano/conf.nanorc
     force: no
 
