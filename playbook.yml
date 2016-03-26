@@ -47,6 +47,7 @@
     - zsh-fix
     - nginx-fix
     - nanorc-fix
+    - gems-fix
 
     # Misc
     - franklinkim.htpasswd
