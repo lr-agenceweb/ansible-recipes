@@ -35,6 +35,7 @@ That's it !
 - PhpMyAdmin [![PhpMyAdmin](https://img.shields.io/badge/galaxy-mjanser.phpmyadmin-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/phpmyadmin/)
 - NodeJS [![NodeJS](https://img.shields.io/badge/galaxy-williamyeh.nodejs-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/williamyeh/nodejs/)
 - ImageMagick [![ImageMagick](https://img.shields.io/badge/galaxy-hashbangcode.imagemagick-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/hashbangcode/imagemagick/)
+- Memcached [![Memcached](https://img.shields.io/badge/galaxy-geerlingguy.memcached-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/geerlingguy/memcached/)
 - Htpasswd [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/)
 - Timezone [![Timezone](https://img.shields.io/badge/galaxy-franklinkim.timezone-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/timezone/)
 - Environment [![Environment](https://img.shields.io/badge/galaxy-franklinkim.environment-5bbdbf.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/environment/)

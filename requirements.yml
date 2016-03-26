@@ -10,9 +10,10 @@
 - src: mjanser.phpmyadmin
 - src: williamyeh.nodejs
 - src: hashbangcode.imagemagick
-- src: franklinkim.htpasswd
+- src: geerlingguy.memcached
 - src: franklinkim.timezone
 - src: franklinkim.environment
+- src: franklinkim.htpasswd
 
 - name: elao.backup-manager
   src: https://github.com/ElaoInfra/ansible-role-backup-manager
