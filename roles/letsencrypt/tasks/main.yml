@@ -1,0 +1,8 @@
+---
+- name: Download Let's encrypt
+  become: yes
+  git:
+    repo: https://github.com/letsencrypt/letsencrypt
+    dest: /opt/letsencrypt
+    clone: yes
+    depth: 1

@@ -7,6 +7,7 @@
     - vars/main.yml
 
   roles:
+    - tools
     - franklinkim.git
 
     # Users
@@ -15,6 +16,7 @@
 
     # Nginx + Passenger
     - mtpereira.passenger
+    - letsencrypt
 
     # Ruby
     - role: rvm_io.rvm1-ruby
@@ -54,6 +56,5 @@
 
     # Misc
     - franklinkim.htpasswd
-    - tools
     - misc
 ...
