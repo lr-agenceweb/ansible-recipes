@@ -8,6 +8,7 @@
 - src: tersmitten.composer
 - src: mjanser.mysql
 - src: mjanser.phpmyadmin
+- src: geerlingguy.adminer
 - src: williamyeh.nodejs
 - src: hashbangcode.imagemagick
 - src: geerlingguy.memcached

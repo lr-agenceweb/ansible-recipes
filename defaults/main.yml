@@ -1,0 +1,9 @@
+---
+user: deploy
+
+# PhpMyAdmin
+install_phpmyadmin: false
+
+# Adminer
+install_adminer: true
+adminer_theme: pappu687
