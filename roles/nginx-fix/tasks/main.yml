@@ -6,6 +6,7 @@
     insertbefore: "# pass the PHP scripts"
     line: "\tinclude /etc/nginx/global.d/phpmyadmin.conf;"
   notify: nginx restart
+  when: install_phpmyadmin
 
 # Passenger
 - name: Uncomment Passenger root path

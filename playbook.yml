@@ -7,6 +7,7 @@
     - vars/main.yml
 
   roles:
+    - utils
     - franklinkim.git
 
     # Users
@@ -15,6 +16,8 @@
 
     # Nginx + Passenger
     - mtpereira.passenger
+    - franklinkim.htpasswd
+    - letsencrypt
 
     # Ruby
     - role: rvm_io.rvm1-ruby
@@ -25,9 +28,15 @@
     - novuso.php-cli
     - tersmitten.composer
 
-    # MySQL
+    # Databases
     - mjanser.mysql
-    - mjanser.phpmyadmin
+    - role: mjanser.phpmyadmin
+      when: install_phpmyadmin
+
+    - role: geerlingguy.adminer
+      when: install_adminer
+    - role: adminer-theme
+      when: install_adminer
 
     # NodeJS
     - williamyeh.nodejs
@@ -51,9 +60,4 @@
     - nginx-fix
     - nanorc-fix
     - gems-fix
-
-    # Misc
-    - franklinkim.htpasswd
-    - tools
-    - misc
-...
+    - php-fix

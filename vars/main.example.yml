@@ -26,6 +26,7 @@ rvm1_rvm_check_for_updates: True
 rvm1_install_path: '/home/{{ ansible_ssh_user }}/.rvm'
 rvm1_rubies:
   - 'ruby-2.3.0'
+rvm1_install_flags: '--auto-dotfiles --user-install'
 
 # PHP FPM
 php_fpm_socket: /var/run/php5-fpm.sock
@@ -45,14 +46,23 @@ mysql_databases:
   - name: '{{ user }}_production'
     import_file: ~
 mysql_users:
-  - name: {{ user }}
-    password: {{ user }}
+  - name: '{{ user }}'
+    password: '{{ user }}'
     privileges: "{{ user }}_demo.*:ALL"
 
 # PhpMyAdmin
+install_phpmyadmin: false
 phpmyadmin_server_host: localhost
 phpmyadmin_server_auth_type: config
 phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
+
+# Adminer
+install_adminer: true
+adminer_install_dir: /usr/share/adminer
+adminer_install_filename: adminer.php
+adminer_symlink_dirs:
+  - /usr/share/nginx/html
+adminer_theme: pappu687
 
 # NodeJS
 nodejs_version: 5.9.1
@@ -66,5 +76,5 @@ environment_config:
 elao_backup_manager_configs_template:  configs/base.conf.j2
 elao_backup_manager_configs_dir: /etc
 elao_backup_manager_configs:
-  - template:  configs/base.conf.j2
+  - template: configs/base.conf.j2
     file: backup-manager.conf

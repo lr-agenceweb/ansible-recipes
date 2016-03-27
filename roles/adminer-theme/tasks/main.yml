@@ -1,0 +1,7 @@
+---
+# Install Adminer theme
+- name: Download adminer flat theme
+  get_url:
+    url: https://raw.githubusercontent.com/vrana/adminer/master/designs/{{ adminer_theme }}/adminer.css
+    dest: "{{ adminer_install_dir }}"
+    mode: 0644
