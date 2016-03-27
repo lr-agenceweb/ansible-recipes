@@ -7,7 +7,7 @@
     - vars/main.yml
 
   roles:
-    - tools
+    - utils
     - franklinkim.git
 
     # Users
@@ -16,6 +16,7 @@
 
     # Nginx + Passenger
     - mtpereira.passenger
+    - franklinkim.htpasswd
     - letsencrypt
 
     # Ruby
@@ -53,8 +54,4 @@
     - nginx-fix
     - nanorc-fix
     - gems-fix
-
-    # Misc
-    - franklinkim.htpasswd
-    - misc
-...
+    - php-fix
