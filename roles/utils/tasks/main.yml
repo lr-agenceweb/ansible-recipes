@@ -5,4 +5,6 @@
     - htop
     - unzip
     - pydf
+    - libmysqlclient-dev # for mysql
+    - libpq-dev # for postgresql
     - libgmp-dev # to install gems without errors
