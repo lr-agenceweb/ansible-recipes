@@ -52,6 +52,9 @@
     - franklinkim.timezone
     - franklinkim.environment
 
+    # Security
+    - security
+
     # Backup and save
     - elao.backup-manager
 
