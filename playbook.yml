@@ -53,6 +53,7 @@
     - franklinkim.environment
 
     # Security
+    - franklinkim.ufw
     - security
 
     # Backup and save
