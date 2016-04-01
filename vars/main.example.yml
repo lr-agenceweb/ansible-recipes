@@ -65,7 +65,7 @@ adminer_symlink_dirs:
 adminer_theme: pappu687
 
 # NodeJS
-nodejs_version: 5.9.1
+nodejs_version: 5
 
 # Timezone and locale
 timezone: 'Europe/Paris'
