@@ -54,6 +54,7 @@
 
     # Security
     - franklinkim.ufw
+    - franklinkim.fail2ban
     - security
 
     # Backup and save
@@ -65,3 +66,4 @@
     - nanorc-fix
     - gems-fix
     - php-fix
+    - fail2ban-fix

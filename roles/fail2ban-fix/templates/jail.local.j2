@@ -1,0 +1,60 @@
+# {{ ansible_managed }}
+
+# Fail2Ban configuration file.
+
+[DEFAULT]
+
+ignoreip = 127.0.0.1/8
+bantime  = 600
+findtime = 600
+maxretry = 3
+backend = auto
+usedns = warn
+destemail = {{ fail2ban_fix.email_notifier }}
+sendername = Fail2Ban
+
+#
+# ACTIONS
+#
+
+{% if fail2ban_fix.slack_notifier %}
+banaction = iptables-multiport
+            slack-notify
+{% else %}
+banaction = iptables-multiport
+{% endif %}
+
+mta = mail
+protocol = tcp
+chain = INPUT
+
+# The simplest action to take: ban only
+action_ = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+
+# ban & send an e-mail with whois report to the destemail.
+action_mw = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+              %(mta)s-whois[name=%(__name__)s, dest="%(destemail)s", protocol="%(protocol)s", chain="%(chain)s", sendername="%(sendername)s"]
+
+# ban & send an e-mail with whois report and relevant log lines
+# to the destemail.
+action_mwl = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+               %(mta)s-whois-lines[name=%(__name__)s, dest="%(destemail)s", logpath=%(logpath)s, chain="%(chain)s", sendername="%(sendername)s"]
+
+{% if fail2ban_fix.slack_notifier %}
+action = %(action_)s
+{% else %}
+action = %(action_mwl)s
+{% endif %}
+
+#
+# JAILS
+#
+
+{% for section in fail2ban_jail|default({}) %}
+[{{ section }}]
+
+{% for option in fail2ban_jail[section] %}
+{{ option }} = {{ fail2ban_jail[section][option] }}
+{% endfor %}
+
+{% endfor %}

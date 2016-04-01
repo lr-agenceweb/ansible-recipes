@@ -81,6 +81,23 @@ ufw_applications:
   - { name: 'OpenSSH', rule: allow }
   - { name: 'Nginx Full', rule: allow }
 
+# Fail2ban [Security]
+fail2ban_jail:
+  ssh:
+    enabled: true
+    port: ssh
+    filter: sshd
+    logpath: /var/log/auth.log
+    maxretry: 6
+fail2ban_jail_template: ~
+
+fail2ban_fix:
+  email_notifier: root@locahost.com
+  slack_notifier: false
+  slack_username: Fail2Ban
+  slack_channel: ~
+  slack_hook: ~
+
 # Backup manager
 elao_backup_manager_configs_template:  configs/base.conf.j2
 elao_backup_manager_configs_dir: /etc
