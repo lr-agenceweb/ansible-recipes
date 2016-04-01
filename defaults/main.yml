@@ -7,3 +7,7 @@ install_phpmyadmin: false
 # Adminer
 install_adminer: true
 adminer_theme: pappu687
+
+# Fail2ban [Security]
+fail2ban_fix:
+  slack_notifier: false

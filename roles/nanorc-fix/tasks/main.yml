@@ -11,3 +11,10 @@
     block: |
       ## Configuration files (catch-all syntax)
       include "/usr/share/nano/conf.nanorc"
+
+- name: Enable autoindent option
+  lineinfile:
+    dest: /etc/nanorc
+    regexp: '^# set autoindent'
+    line: "set autoindent"
+    state: present

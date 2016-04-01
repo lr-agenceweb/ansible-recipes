@@ -52,6 +52,11 @@
     - franklinkim.timezone
     - franklinkim.environment
 
+    # Security
+    - franklinkim.ufw
+    - franklinkim.fail2ban
+    - security
+
     # Backup and save
     - elao.backup-manager
 
@@ -61,3 +66,4 @@
     - nanorc-fix
     - gems-fix
     - php-fix
+    - fail2ban-fix
