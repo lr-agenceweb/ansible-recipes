@@ -1,0 +1,16 @@
+[Definition]
+
+actionstart =
+actionstop =
+actioncheck =
+
+actionban = curl -X POST --data-urlencode 'payload={"channel": "#<slack_channel>", "username": "<slack_username>", "text": "*<name>* cop banned IP *<ip>* for <failures> failure(s)", "icon_emoji": ":cop:"}' <slack_api_token>
+
+actionunban = curl -X POST --data-urlencode 'payload={"channel": "#<slack_channel>", "username": "<slack_username>", "text": "*<name>* cop unbanned IP *<ip>*", "icon_emoji": ":cop:"}' <slack_api_token>
+
+
+[Init]
+
+slack_api_token = {{ fail2ban_fix.slack_hook }}
+slack_channel = {{ fail2ban_fix.slack_channel }}
+slack_username = {{ fail2ban_fix.slack_username }}
