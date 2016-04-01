@@ -72,6 +72,15 @@ timezone: 'Europe/Paris'
 environment_config:
   LC_ALL: en_US.UTF-8
 
+# UFW [Security]
+ufw_rules:
+  - { port: 3306, proto: 'tcp', rule: allow } # MySQL
+  - { port: 5432, proto: 'tcp', rule: allow } # PostgreSQL
+  - { port: 11211, proto: 'tcp', rule: allow } # Memcached
+ufw_applications:
+  - { name: 'OpenSSH', rule: allow }
+  - { name: 'Nginx Full', rule: allow }
+
 # Backup manager
 elao_backup_manager_configs_template:  configs/base.conf.j2
 elao_backup_manager_configs_dir: /etc
