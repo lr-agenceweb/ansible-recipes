@@ -9,8 +9,10 @@
 
 - name: Create gitconfig file to enable gitignore_global
   blockinfile:
+    create: yes
+    owner: '{{ user }}'
+    group: '{{ user }}'
     dest: '{{ user_home_directory }}/.gitconfig'
     block: |
       [core]
         excludesfile = ~/.gitignore_global
-    create: yes
