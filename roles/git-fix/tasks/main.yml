@@ -1,0 +1,6 @@
+---
+- name: Upload gitignore file
+  template:
+    src: templates/.gitignore_global
+    dest: '{{ user_home_directory }}/.gitignore_global'
+    force: yes

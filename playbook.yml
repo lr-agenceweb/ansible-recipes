@@ -61,6 +61,7 @@
     - elao.backup-manager
 
     # Fix
+    - git-fix
     - zsh-fix
     - nginx-fix
     - nanorc-fix
