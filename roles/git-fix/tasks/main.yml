@@ -3,4 +3,6 @@
   template:
     src: templates/.gitignore_global
     dest: '{{ user_home_directory }}/.gitignore_global'
+    owner: '{{ user }}'
+    group: '{{ user }}'
     force: yes
