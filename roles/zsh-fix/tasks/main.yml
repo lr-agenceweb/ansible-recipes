@@ -6,6 +6,10 @@
 
 - name: Add ll alias showing dotfiles to .zshrc
   lineinfile:
-    dest: /home/{{ user }}/.zshrc
-    regexp: ^ll=
-    line: "\nalias ll='ls -ahlF'"
+    dest: '{{ user_home_directory }}/.zshrc'
+    line: "alias ll='ls -ahlF'"
+
+- name: Add cll alias for coloring tail logs
+  lineinfile:
+    dest: '{{ user_home_directory }}/.zshrc'
+    line: "alias cll='source-highlight -f esc -s log'"
