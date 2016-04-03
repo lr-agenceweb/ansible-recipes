@@ -55,6 +55,7 @@
     # Security
     - franklinkim.ufw
     - franklinkim.fail2ban
+    - proftpd
     - security
 
     # Backup and save
