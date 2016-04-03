@@ -5,6 +5,7 @@
     - htop
     - unzip
     - pydf
+    - tree # list folders as tree
     - libmysqlclient-dev # for mysql
     - libpq-dev # for postgresql
     - libgmp-dev # to install gems without errors
