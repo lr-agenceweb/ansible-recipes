@@ -43,7 +43,7 @@
 
     # Convert packages
     - hashbangcode.imagemagick
-    # - avconv
+    - avconv
 
     # Cache
     - geerlingguy.memcached
