@@ -4,6 +4,11 @@
     repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest={{ user_home_directory }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
+- name: Fix issue with sudo ll
+  lineinfile:
+    dest: '{{ user_home_directory }}/.zshrc'
+    line: "alias sudo='sudo '"
+
 - name: Add ll alias showing dotfiles to .zshrc
   lineinfile:
     dest: '{{ user_home_directory }}/.zshrc'
