@@ -99,8 +99,11 @@ fail2ban_fix:
   slack_hook: ~
 
 # Backup manager
-elao_backup_manager_configs_template:  configs/base.conf.j2
-elao_backup_manager_configs_dir: /etc
-elao_backup_manager_configs:
-  - template: configs/base.conf.j2
-    file: backup-manager.conf
+backup_manager_conf:
+  bm_frequency: daily # hourly / monthly / weekly
+  bm_archive_ttl: 14
+  bm_upload_method: ftp
+  bm_upload_destination: /var/backups
+  bm_upload_ftp_user: user
+  bm_upload_ftp_password: password
+  bm_upload_ftp_hosts: host

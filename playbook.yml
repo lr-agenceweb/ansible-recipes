@@ -59,7 +59,7 @@
     - security
 
     # Backup and save
-    - elao.backup-manager
+    - lr-agenceweb.backup-manager
 
     # Fix
     - git-fix
