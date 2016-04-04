@@ -18,3 +18,9 @@
     regexp: '# DefaultRoot'
     replace: 'DefaultRoot'
   notify: restart proftpd
+
+- name: Install quota package
+  apt:
+    name: quota
+    update_cache: yes
+    state: present
