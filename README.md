@@ -43,11 +43,14 @@ If you want to switch back to PHPMyAdmin instead, change the `install_phpmyadmin
 **ImageMagick** [![ImageMagick](https://img.shields.io/badge/galaxy-hashbangcode.imagemagick-660198.svg?style=flat-square)](https://galaxy.ansible.com/hashbangcode/imagemagick/) | Image converter
 **Memcached** [![Memcached](https://img.shields.io/badge/galaxy-geerlingguy.memcached-660198.svg?style=flat-square)](https://galaxy.ansible.com/geerlingguy/memcached/) | Cache manager
 **Htpasswd** [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/) | Apache htpassword for Nginx
+**UFW** [![UFW](https://img.shields.io/badge/galaxy-franklinkim.ufw-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/ufw/) | Firewall
+**Fail2Ban** [![Fail2Ban](https://img.shields.io/badge/galaxy-franklinkim.fail2ban-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/fail2ban/) | Ban user by behavior
+**ProFTPD** | Add some rules to securize FTP transfer
+**Backup Manager** [![Backup Manager](https://img.shields.io/badge/github-lr--agenceweb.backup--manager-F9690E.svg?style=flat-square)](https://github.com/lr-agenceweb/ansible-backup-manager) | Backup folders and export it to FTP
 **Timezone** [![Timezone](https://img.shields.io/badge/galaxy-franklinkim.timezone-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/timezone/) | Configure correct timezone to VPS
 **Environment** [![Environment](https://img.shields.io/badge/galaxy-franklinkim.environment-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/environment/) | Set correct locales for VPS
 
 
 ### TODO
 - Let's Encrypt
-- Backup gem
-- Backup Manager
+- Backup gem (database export)
