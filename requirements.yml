@@ -18,6 +18,5 @@
 - src: franklinkim.ufw
 - src: franklinkim.fail2ban
 
-- name: elao.backup-manager
-  src: https://github.com/ElaoInfra/ansible-role-backup-manager
-  version: '1.0'
+- name: lr-agenceweb.backup-manager
+  src: https://github.com/lr-agenceweb/ansible-backup-manager

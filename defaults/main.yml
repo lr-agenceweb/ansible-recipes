@@ -11,3 +11,8 @@ adminer_theme: pappu687
 # Fail2ban [Security]
 fail2ban_fix:
   slack_notifier: false
+
+# Backup manager
+backup_manager_conf:
+  bm_frequency: daily
+  bm_archive_ttl: 5
