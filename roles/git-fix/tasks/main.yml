@@ -1,0 +1,18 @@
+---
+- name: Upload gitignore file
+  template:
+    src: templates/.gitignore_global
+    dest: '{{ user_home_directory }}/.gitignore_global'
+    owner: '{{ user }}'
+    group: '{{ user }}'
+    force: yes
+
+- name: Create gitconfig file to enable gitignore_global
+  blockinfile:
+    create: yes
+    owner: '{{ user }}'
+    group: '{{ user }}'
+    dest: '{{ user_home_directory }}/.gitconfig'
+    block: |
+      [core]
+        excludesfile = ~/.gitignore_global

@@ -1,0 +1,26 @@
+---
+- name: Install proftpd package
+  apt:
+    name: proftpd
+    update_cache: yes
+    state: present
+  notify: restart proftpd
+
+- name: Enable port 21 (proftpd) in firewall
+  ufw:
+    rule: allow
+    port: 21
+  notify: restart proftpd
+
+- name: Restrict user to his personal home folder
+  replace:
+    dest: /etc/proftpd/proftpd.conf
+    regexp: '# DefaultRoot'
+    replace: 'DefaultRoot'
+  notify: restart proftpd
+
+- name: Install quota package
+  apt:
+    name: quota
+    update_cache: yes
+    state: present

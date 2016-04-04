@@ -43,7 +43,7 @@
 
     # Convert packages
     - hashbangcode.imagemagick
-    # - avconv
+    - avconv
 
     # Cache
     - geerlingguy.memcached
@@ -55,12 +55,14 @@
     # Security
     - franklinkim.ufw
     - franklinkim.fail2ban
+    - proftpd
     - security
 
     # Backup and save
-    - elao.backup-manager
+    - lr-agenceweb.backup-manager
 
     # Fix
+    - git-fix
     - zsh-fix
     - nginx-fix
     - nanorc-fix

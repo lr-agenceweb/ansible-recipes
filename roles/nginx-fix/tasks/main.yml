@@ -1,4 +1,23 @@
 ---
+# PHP FPM
+- name: Activate PHP FPM for default vhost
+  blockinfile:
+    dest: /etc/nginx/sites-available/default
+    insertbefore: "# deny access to .htaccess files"
+    block: |
+      location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+      }
+  notify: nginx restart
+
+- name: Add index.php as primary index file to check
+  replace:
+    dest: /etc/nginx/sites-available/default
+    regexp: 'index index.html'
+    replace: 'index index.php index.html'
+  notify: nginx restart
+
 # PHPMyAdmin
 - name: Include PHPMyAdmin location to default nginx vhost
   lineinfile:

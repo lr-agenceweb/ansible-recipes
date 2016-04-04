@@ -12,3 +12,11 @@
               line="PermitRootLogin no"
               state=present
   notify: restart ssh
+
+- name: Restrict user who could connect by ssh
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    insertafter: UsePrivilegeSeparation
+    line: "AllowUsers {{ user }} vagrant"
+    state: present
+  notify: restart ssh

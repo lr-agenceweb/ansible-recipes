@@ -3,3 +3,5 @@
   template:
     src: templates/.gemrc
     dest: '{{ user_home_directory }}'
+    owner: '{{ user }}'
+    group: '{{ user }}'
