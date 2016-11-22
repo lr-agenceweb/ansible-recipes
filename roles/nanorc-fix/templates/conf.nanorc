@@ -1,6 +1,6 @@
 # config file highlighting
 
-syntax "conf" "(\.(conf|config|cfg|cnf|rc|lst|list|defs|ini|desktop|mime|types|preset|cache|rules|seat|service|gitignore|gitignore_global|htaccess|zshrc)$|(^|/)(\w*crontab|mirrorlist|group|default|ufw|hosts|sshd_config|default|passwd|rpc|netconfig|shadow|fstab|local|inittab|inputrc|protocols|sudoers)$|conf.d/|.config/)"
+syntax "conf" "(\.(conf|config|cf|cfg|cnf|rc|lst|list|defs|ini|desktop|mime|types|preset|cache|rules|seat|service|gitignore|gitignore_global|htaccess|zshrc)$|(^|/)(\w*crontab|mirrorlist|group|default|ufw|hosts|sshd_config|default|passwd|rpc|netconfig|shadow|fstab|local|inittab|inputrc|protocols|sudoers)$|conf.d/|.config/)"
 
 # default text
 color magenta "^.*$"
