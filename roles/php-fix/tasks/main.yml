@@ -1,3 +1,8 @@
 ---
+- name: Install php-gettext
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - php-gettext
+
 - name: Disable xdebug for php-cli
-  shell: php5dismod -s cli xdebug
+  shell: phpdismod -s cli xdebug

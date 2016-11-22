@@ -14,25 +14,25 @@
     - franklinkim.sudo
     - franklinkim.users-oh-my-zsh
 
-    # Nginx + Passenger
-    - mtpereira.passenger
+    # Nginx
+    - geerlingguy.nginx
+    # - mtpereira.passenger (Not used)
+    # - letsencrypt
     - franklinkim.htpasswd
-    - letsencrypt
 
     # Ruby
-    - role: rvm_io.rvm1-ruby
+    - role: rvm_io.ruby
       become_user: '{{ user }}'
 
     # PHP
-    - nbz4live.php-fpm
-    - novuso.php-cli
+    - zerohacks.php5-fpm
     - tersmitten.composer
 
     # Databases
     - mjanser.mysql
+    # - geerlingguy.redis
     - role: mjanser.phpmyadmin
       when: install_phpmyadmin
-
     - role: geerlingguy.adminer
       when: install_adminer
     - role: adminer-theme
@@ -45,6 +45,9 @@
     - hashbangcode.imagemagick
     - avconv
 
+    # Email server [Postfix]
+    - Stouts.postfix
+
     # Cache
     - geerlingguy.memcached
 
@@ -55,7 +58,7 @@
     # Security
     - franklinkim.ufw
     - franklinkim.fail2ban
-    - proftpd
+    # - proftpd
     - security
 
     # Backup and save
