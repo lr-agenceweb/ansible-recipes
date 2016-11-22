@@ -29,25 +29,30 @@ If you want to switch back to PHPMyAdmin instead, change the `install_phpmyadmin
 **htop** | Monitorize VPS processes
 **unzip** | Usnzip files
 **pydf** | Show informations about VPS disk space
+**wkhtmltopdf** | Convert HTML code to PDF file
 **Git** [![Git](https://img.shields.io/badge/galaxy-franklinkim.git-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/git) | Use git tools
 **ZSH / oh-my-zsh** [![ZSH / oh-my-zsh](https://img.shields.io/badge/galaxy-franklinkim.users--oh--my--zsh-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/users-oh-my-zsh) | Shell replacement
-**Nginx / Passenger** [![Nginx / Passenger](https://img.shields.io/badge/galaxy-mtpereira.passenger-660198.svg?style=flat-square)](https://galaxy.ansible.com/mtpereira/passenger) | Installation of web server (Rails friendly)
-**RVM / Ruby** [![RVM / Ruby](https://img.shields.io/badge/galaxy-rvm_io.rvm1--ruby-660198.svg?style=flat-square)](https://galaxy.ansible.com/rvm_io/rvm1-ruby) | Installation of Ruby version through RVM
-**PHP CLI** [![PHP CLI](https://img.shields.io/badge/galaxy-novuso.php--cli-660198.svg?style=flat-square)](https://galaxy.ansible.com/novuso/php-cli/) | Use PHP through command lines
-**PHP FPM** [![PHP FPM](https://img.shields.io/badge/galaxy-nbz4live.php--fpm-660198.svg?style=flat-square)](https://galaxy.ansible.com/nbz4live/php-fpm/) | PHP compiled for Nginx
+**Nginx** [![Nginx](https://img.shields.io/badge/galaxy-geerlingguy.nginx-660198.svg?style=flat-square)](https://galaxy.ansible.com/geerlingguy/nginx/) | Installation of web server (Rails friendly)
+**RVM / Ruby** [![RVM / Ruby](https://img.shields.io/badge/galaxy-rvm_io.ruby-660198.svg?style=flat-square)](https://galaxy.ansible.com/rvm_io/ruby) | Installation of Ruby version through RVM
+**PHP FPM** [![PHP FPM](https://img.shields.io/badge/galaxy-zerohacks.php5--fpm-660198.svg?style=flat-square)](https://galaxy.ansible.com/zerohacks/php5-fpm/) | PHP compiled for Nginx
 **Composer** [![Composer](https://img.shields.io/badge/galaxy-tersmitten.composer-660198.svg?style=flat-square)](https://galaxy.ansible.com/tersmitten/composer/) | Dependency Management for PHP
-**MySQL** [![MySQL](https://img.shields.io/badge/galaxy-mjanser.mysql-660198.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/mysql/) | Database management system
+**MariaDB** [![MariaDB](https://img.shields.io/badge/galaxy-mjanser.mysql-660198.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/mysql/) | Database management system
+**Redis** [![Redis](https://img.shields.io/badge/galaxy-geerlingguy.redis-660198.svg?style=flat-square)](https://galaxy.ansible.com/geerlingguy.redis/) | Database and cache management
 **PhpMyAdmin** [![PhpMyAdmin](https://img.shields.io/badge/galaxy-mjanser.phpmyadmin-660198.svg?style=flat-square)](https://galaxy.ansible.com/mjanser/phpmyadmin/) | Handle the administration of MySQL databases
 **Adminer** [![Adminer](https://img.shields.io/badge/galaxy-geerlingguy.adminer-660198.svg?style=flat-square)](https://galaxy.ansible.com/geerlingguy/adminer/) | Handle the administration of MySQL, PostgreSQL, SQLite, ... databases
 **NodeJS** [![NodeJS](https://img.shields.io/badge/galaxy-williamyeh.nodejs-660198.svg?style=flat-square)](https://galaxy.ansible.com/williamyeh/nodejs/) | Include npm to manage node modules
+**Postfix** [![Postfix](https://img.shields.io/badge/galaxy-Stouts.postfix-660198.svg?style=flat-square)](https://galaxy.ansible.com/Stouts/postfix/) | Email server to send emails
 **ImageMagick** [![ImageMagick](https://img.shields.io/badge/galaxy-hashbangcode.imagemagick-660198.svg?style=flat-square)](https://galaxy.ansible.com/hashbangcode/imagemagick/) | Image converter
 **Memcached** [![Memcached](https://img.shields.io/badge/galaxy-geerlingguy.memcached-660198.svg?style=flat-square)](https://galaxy.ansible.com/geerlingguy/memcached/) | Cache manager
 **Htpasswd** [![Htpasswd](https://img.shields.io/badge/galaxy-franklinkim.htpasswd-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/htpasswd/) | Apache htpassword for Nginx
+**UFW** [![UFW](https://img.shields.io/badge/galaxy-franklinkim.ufw-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/ufw/) | Firewall
+**Fail2Ban** [![Fail2Ban](https://img.shields.io/badge/galaxy-franklinkim.fail2ban-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/fail2ban/) | Ban user by behavior
+**ProFTPD** | Add some rules to securize FTP transfer
+**Backup Manager** [![Backup Manager](https://img.shields.io/badge/github-lr--agenceweb.backup--manager-F9690E.svg?style=flat-square)](https://github.com/lr-agenceweb/ansible-backup-manager) | Backup folders and export it to FTP
 **Timezone** [![Timezone](https://img.shields.io/badge/galaxy-franklinkim.timezone-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/timezone/) | Configure correct timezone to VPS
 **Environment** [![Environment](https://img.shields.io/badge/galaxy-franklinkim.environment-660198.svg?style=flat-square)](https://galaxy.ansible.com/franklinkim/environment/) | Set correct locales for VPS
 
 
 ### TODO
 - Let's Encrypt
-- Backup gem
-- Backup Manager
+- Backup gem (database export)

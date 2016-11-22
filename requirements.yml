@@ -1,22 +1,40 @@
+# Core
 - src: franklinkim.git
 - src: franklinkim.sudo
 - src: franklinkim.users-oh-my-zsh
-- src: mtpereira.passenger
-- src: rvm_io.rvm1-ruby
-- src: nbz4live.php-fpm
-- src: novuso.php-cli
+
+# Servers
+- src: geerlingguy.nginx
+# - src: mtpereira.passenger # Not used
+
+# Ruby
+- src: rvm_io.ruby
+
+# PHP
+- src: zerohacks.php5-fpm
 - src: tersmitten.composer
+
+# Databases
 - src: mjanser.mysql
+- src: geerlingguy.redis
 - src: mjanser.phpmyadmin
 - src: geerlingguy.adminer
+
+# NodeJS
 - src: williamyeh.nodejs
+
+# Email
+- src: Stouts.postfix
+
+# Misc
 - src: hashbangcode.imagemagick
 - src: geerlingguy.memcached
 - src: franklinkim.timezone
 - src: franklinkim.environment
+
+# Security
 - src: franklinkim.htpasswd
 - src: franklinkim.ufw
 - src: franklinkim.fail2ban
-
 - name: lr-agenceweb.backup-manager
   src: https://github.com/lr-agenceweb/ansible-backup-manager
