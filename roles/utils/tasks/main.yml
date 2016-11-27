@@ -5,7 +5,7 @@
     - htop
     - unzip
     - pydf
-    - source-highlight # colorize tail logs
+    - lnav # colorize tail logs
     - tree # list folders as tree
     - libmysqlclient-dev # for mysql
     - libpq-dev # for postgresql
