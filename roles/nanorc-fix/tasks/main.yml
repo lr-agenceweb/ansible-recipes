@@ -11,6 +11,12 @@
     dest: /usr/share/nano/yml.nanorc
     force: no
 
+- name: Upload slim file syntax highlighting for nano
+  template:
+    src: templates/slim.nanorc
+    dest: /usr/share/nano/slim.nanorc
+    force: yes
+
 - name: Add colorization for conf file with nano editor
   blockinfile:
     dest: /etc/nanorc
@@ -18,17 +24,17 @@
       ## Configuration files (catch-all syntax)
       include "/usr/share/nano/conf.nanorc"
       include "/usr/share/nano/yml.nanorc"
+      include "/usr/share/nano/slim.nanorc"
+    force: no
 
 - name: Enable autoindent option
-  lineinfile:
+  replace:
     dest: /etc/nanorc
-    regexp: '^# set autoindent'
-    line: "set autoindent"
-    state: present
+    regexp: '# set autoindent'
+    replace: "set autoindent"
 
 - name: Show line numbers
-  lineinfile:
+  replace:
     dest: /etc/nanorc
-    regexp: '^# set const'
-    line: "set const"
-    state: present
+    regexp: '# set const'
+    replace: "set const"
