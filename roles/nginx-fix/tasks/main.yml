@@ -1,4 +1,12 @@
 ---
+# Replace default root_path for nginx
+- name:
+  replace:
+    dest: /etc/nginx/sites-available/default
+    regexp: '/var/www/html'
+    replace: '/usr/share/nginx/html'
+  notify: nginx restart
+
 # PHP FPM
 - name: Activate PHP FPM for default vhost
   blockinfile:
@@ -7,7 +15,7 @@
     block: |
       location ~ \.php$ {
         include fastcgi_params;
-        fastcgi_pass {{ fpm_listen }};
+        fastcgi_pass unix:{{ fpm_listen }};
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
       }
@@ -27,7 +35,7 @@
     insertbefore: "# pass the PHP scripts"
     line: "\tinclude /etc/nginx/global.d/phpmyadmin.conf;"
   notify: nginx restart
-  when: install_phpmyadmin
+  when: database_management == 'phpmyadmin'
 
 # # Passenger (Not used)
 # - name: Uncomment Passenger root path

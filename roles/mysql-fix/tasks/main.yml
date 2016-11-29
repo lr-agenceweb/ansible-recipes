@@ -1,0 +1,6 @@
+---
+# Remove list of SQL files in /tmp folder
+- name: Remove directory that contains SQL databases imported
+  file:
+    state: absent
+    path: '{{ mysql_remote_dest }}/'

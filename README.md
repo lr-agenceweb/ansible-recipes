@@ -18,7 +18,7 @@ That's it !
 
 ### PHPMyAdmin vs Adminer
 Both are included in recipes but by default, only Adminer is activated.  
-If you want to switch back to PHPMyAdmin instead, change the `install_phpmyadmin` boolean to `true` and `install_adminer` to `false`
+If you want to switch back to PHPMyAdmin instead, change the `database_management` to `phpmyadmin`
 
 
 ### Tools

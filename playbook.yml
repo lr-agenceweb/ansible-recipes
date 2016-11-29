@@ -4,71 +4,95 @@
   remote_user: root
   become: yes
   vars_files:
-    - vars/main.yml
+    # - vars/main.yml
+    - vars/projects/lragenceweb.yml
 
   roles:
     - utils
     - franklinkim.git
 
-    # Users
+    #
+    # Users and ZSH
+    # ===============
     - franklinkim.sudo
     - franklinkim.users-oh-my-zsh
 
+    #
+    # Servers
+    # =========
     # Nginx
     - geerlingguy.nginx
     # - mtpereira.passenger (Not used)
     # - letsencrypt
-    - franklinkim.htpasswd
 
-    # Ruby
+    #
+    # RVM and Ruby
+    # ==============
     - role: rvm_io.ruby
       become_user: '{{ user }}'
 
-    # PHP
-    - zerohacks.php5-fpm
+    #
+    # PHP fpm
+    # =========
+    - mjanser.php
     - tersmitten.composer
 
+    #
     # Databases
+    # ===========
+    - mysql-db-import # Copy local databases to remote folder
     - mjanser.mysql
-    # - geerlingguy.redis
     - role: mjanser.phpmyadmin
-      when: install_phpmyadmin
+      when: database_management == 'phpmyadmin'
     - role: geerlingguy.adminer
-      when: install_adminer
-    - role: adminer-theme
-      when: install_adminer
+      when: database_management == 'adminer'
 
+    #
     # NodeJS
+    # ========
     - williamyeh.nodejs
 
+    #
     # Convert packages
+    # ==================
     - hashbangcode.imagemagick
     - avconv
 
-    # Email server [Postfix]
+    #
+    # Postfix [Mail server]
+    # =======================
     - Stouts.postfix
 
+    #
     # Cache
+    # =======
     - geerlingguy.memcached
+    # - geerlingguy.redis
 
+    #
     # Timezone and locale
+    # =====================
     - franklinkim.timezone
     - franklinkim.environment
 
+    #
     # Security
+    # ==========
+    - franklinkim.htpasswd
     - franklinkim.ufw
     - franklinkim.fail2ban
     # - proftpd
     - security
+    - lr-agenceweb.backup-manager # Backup and save
 
-    # Backup and save
-    - lr-agenceweb.backup-manager
-
-    # Fix
-    - git-fix
+    #
+    # Fixes
+    # =======
     - zsh-fix
-    - nginx-fix
     - nanorc-fix
+    - git-fix
+    - nginx-fix
     - gems-fix
     - php-fix
+    - mysql-fix
     - fail2ban-fix

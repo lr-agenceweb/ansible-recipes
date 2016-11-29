@@ -1,0 +1,12 @@
+---
+- name: Create directory that contains SQL databases to import
+  file:
+    path: '{{ mysql_remote_dest }}'
+    state: directory
+
+# Copy local database SQL files to remote server
+- name: Copy database SQL files to remote server
+  copy:
+    src: '{{ item }}'
+    dest: '{{ mysql_remote_dest }}'
+  with_items: '{{ mysql_local_databases }}'

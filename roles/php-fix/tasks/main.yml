@@ -1,4 +1,14 @@
 ---
+- name: Fix Adminer logout button z-index value.
+  blockinfile:
+    dest: "{{ adminer_install_dir }}/adminer.css"
+    marker: "/* {mark} ANSIBLE MANAGED BLOCK */"
+    block: |
+      .logout {
+        z-index: 9999;
+      }
+  when: database_management == 'adminer' and adminer_theme is defined and adminer_theme != ''
+
 - name: Install php-gettext
   apt: name={{ item }} update_cache=yes state=latest
   with_items:

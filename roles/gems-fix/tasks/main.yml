@@ -5,3 +5,8 @@
     dest: '{{ user_home_directory }}'
     owner: '{{ user }}'
     group: '{{ user }}'
+
+# - name: Install usefull gems
+#   gem: name={{ item }} state=latest
+#   with_items:
+#     - backup # Databases export

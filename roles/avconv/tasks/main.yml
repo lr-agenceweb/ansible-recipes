@@ -1,4 +1,13 @@
 ---
+- name: Install PPA
+  become: yes
+  become_user: root
+  apt_repository: repo='ppa:heyarje/libav-11' state=present
+
+- name: Update apt
+  become: yes
+  become_user: root
+  apt: update_cache=yes
 
 - name: Install avconv
   apt: name={{ item }} update_cache=yes state=latest

@@ -11,14 +11,16 @@
 - src: rvm_io.ruby
 
 # PHP
-- src: zerohacks.php5-fpm
+- src: mjanser.php
 - src: tersmitten.composer
 
 # Databases
 - src: mjanser.mysql
 - src: geerlingguy.redis
 - src: mjanser.phpmyadmin
-- src: geerlingguy.adminer
+- name: geerlingguy.adminer
+  src: https://github.com/gemsfix/ansible-role-adminer
+  version: remotes/origin/feature/fix-bugs
 
 # NodeJS
 - src: williamyeh.nodejs

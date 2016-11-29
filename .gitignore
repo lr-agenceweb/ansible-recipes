@@ -1,2 +1,3 @@
 playbook.retry
 /vars/main.yml
+/vars/projects/
