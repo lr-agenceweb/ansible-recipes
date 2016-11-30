@@ -4,8 +4,7 @@
   remote_user: root
   become: yes
   vars_files:
-    # - vars/main.yml
-    - vars/projects/lragenceweb.yml
+    - vars/main.yml
 
   roles:
     - utils
