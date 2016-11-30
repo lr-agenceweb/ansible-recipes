@@ -11,3 +11,4 @@
     - libpq-dev # for postgresql
     - libgmp-dev # to install gems without errors
     - wkhtmltopdf # HTML to PDF
+    - curl
