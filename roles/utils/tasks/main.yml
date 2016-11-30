@@ -5,9 +5,10 @@
     - htop
     - unzip
     - pydf
-    - source-highlight # colorize tail logs
+    - lnav # colorize tail logs
     - tree # list folders as tree
     - libmysqlclient-dev # for mysql
     - libpq-dev # for postgresql
     - libgmp-dev # to install gems without errors
     - wkhtmltopdf # HTML to PDF
+    - curl

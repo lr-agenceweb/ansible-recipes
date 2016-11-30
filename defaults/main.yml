@@ -1,11 +1,10 @@
 ---
 user: deploy
 
-# PhpMyAdmin
-install_phpmyadmin: false
-
-# Adminer
-install_adminer: true
+#
+# Databases
+# ===========
+database_management: true
 adminer_theme: pappu687
 
 # Fail2ban [Security]

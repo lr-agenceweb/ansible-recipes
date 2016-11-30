@@ -1,9 +1,13 @@
 ---
+#
 # Default
+# =========
 user: deploy
 user_home_directory: '/home/{{ user }}'
 
+#
 # Users and ZSH
+# ===============
 sudo_users:
   - name: '{{ user }}'
     nopasswd: yes
@@ -17,30 +21,38 @@ users:
       theme: agnoster
       plugins: git zsh-syntax-highlighting
 
+#
+# Servers
+# =========
+# Nginx
+nginx_ppa_use: true
+nginx_ppa_version: stable # 1.10.1
+
 # Passenger
 passenger_webserver: nginx
 
+#
 # RVM and Ruby
+# ==============
+rvm1_user: '{{ user }}'
 rvm1_rvm_version: 'stable'
-rvm1_rvm_check_for_updates: True
+rvm1_rvm_check_for_updates: false
 rvm1_install_path: '/home/{{ ansible_ssh_user }}/.rvm'
 rvm1_rubies:
-  - 'ruby-2.3.0'
+  - 'ruby-2.3.3'
 rvm1_install_flags: '--auto-dotfiles --user-install'
 
-# PHP FPM
-php_fpm_socket: /var/run/php5-fpm.sock
-php_fpm_pools:
- - name: www
-   listen.owner: www-data
-   listen.group: www-data
-   listen.mode: '0660'
-   user: www-data
-   group: www-data
-   listen: '{{ php_fpm_socket }}'
-   chdir: /
+#
+# PHP fpm
+# =========
+php_version: 7.0
+php_fpm_socket: /var/run/php/php7.0-fpm.sock
+fpm_listen: '{{ php_fpm_socket }}'
 
-# MySQL
+#
+# Databases
+# ===========
+# MySQL | MariaDB
 mysql_root_password: root
 mysql_databases:
   - name: '{{ user }}_production'
@@ -50,29 +62,45 @@ mysql_users:
     password: '{{ user }}'
     privileges: "{{ user }}_demo.*:ALL"
 
+#
+# Databases managers
+# ====================
+database_management: adminer # adminer | phpmyadmin
+
 # PhpMyAdmin
-install_phpmyadmin: false
 phpmyadmin_server_host: localhost
 phpmyadmin_server_auth_type: config
-phpmyadmin_php_fpm_socket: 'unix:{{ php_fpm_socket }}'
+phpmyadmin_php_fpm_socket: '{{ fpm_listen }}'
 
 # Adminer
-install_adminer: true
 adminer_install_dir: /usr/share/adminer
 adminer_install_filename: adminer.php
 adminer_symlink_dirs:
   - /usr/share/nginx/html
 adminer_theme: pappu687
+adminer_sgbd: '-mysql'
+adminer_lang: '-en'
 
+#
 # NodeJS
+# ========
 nodejs_version: 5
 
+#
+# Postfix [Mail server]
+# =======================
+postfix_smtp_sasl_auth_enable: false
+
+#
 # Timezone and locale
+# =====================
 timezone: 'Europe/Paris'
 environment_config:
   LC_ALL: en_US.UTF-8
 
+#
 # UFW [Security]
+# ================
 ufw_rules:
   - { port: 3306, proto: 'tcp', rule: allow } # MySQL
   - { port: 5432, proto: 'tcp', rule: allow } # PostgreSQL
@@ -81,7 +109,9 @@ ufw_applications:
   - { name: 'OpenSSH', rule: allow }
   - { name: 'Nginx Full', rule: allow }
 
+#
 # Fail2ban [Security]
+# =====================
 fail2ban_jail:
   ssh:
     enabled: true
@@ -98,7 +128,9 @@ fail2ban_fix:
   slack_channel: ~
   slack_hook: ~
 
+#
 # Backup manager
+# ================
 backup_manager_conf:
   bm_frequency: daily # hourly / monthly / weekly
   bm_archive_ttl: 14
@@ -107,3 +139,11 @@ backup_manager_conf:
   bm_upload_ftp_user: user
   bm_upload_ftp_password: password
   bm_upload_ftp_hosts: host
+
+#
+# Htpasswd [Security]
+# =====================
+htpasswd:
+  - name: my_site
+    users:
+      - { name: my_name, password: my_password }
