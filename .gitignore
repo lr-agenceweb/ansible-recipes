@@ -2,3 +2,6 @@ playbook.retry
 /vars/main.yml
 /vars/projects/
 hosts
+
+roles/nginx-fix/templates/*
+!roles/nginx-fix/templates/default.html

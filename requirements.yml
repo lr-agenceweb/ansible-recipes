@@ -5,7 +5,6 @@
 
 # Servers
 - src: geerlingguy.nginx
-# - src: mtpereira.passenger # Not used
 
 # Ruby
 - src: rvm_io.ruby

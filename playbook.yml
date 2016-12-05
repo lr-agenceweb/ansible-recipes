@@ -19,10 +19,7 @@
     #
     # Servers
     # =========
-    # Nginx
-    - geerlingguy.nginx
-    # - mtpereira.passenger (Not used)
-    # - letsencrypt
+    - geerlingguy.nginx # Nginx
 
     #
     # RVM and Ruby
@@ -77,6 +74,7 @@
     #
     # Security
     # ==========
+    # - letsencrypt
     - franklinkim.htpasswd
     - franklinkim.ufw
     - franklinkim.fail2ban

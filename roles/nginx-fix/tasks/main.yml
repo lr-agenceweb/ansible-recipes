@@ -7,6 +7,15 @@
     replace: '/usr/share/nginx/html'
   notify: nginx restart
 
+# Replace default Nginx homepage by custom one
+- name: Upload new Nginx homepage
+  template:
+    src: 'templates/{{ nginx_custom_root_template }}.html'
+    dest: '/usr/share/nginx/html/index.html'
+    force: yes
+  when: nginx_use_custom_root_html and nginx_custom_root_template != ''
+  notify: nginx restart
+
 # PHP FPM
 - name: Activate PHP FPM for default vhost
   blockinfile:
@@ -36,25 +45,3 @@
     line: "\tinclude /etc/nginx/global.d/phpmyadmin.conf;"
   notify: nginx restart
   when: database_management == 'phpmyadmin'
-
-# # Passenger (Not used)
-# - name: Uncomment Passenger root path
-#   replace:
-#     dest: /etc/nginx/nginx.conf
-#     regexp: '# passenger_root'
-#     replace: 'passenger_root'
-#   notify: nginx restart
-#
-# - name: Add Ruby Passenger path to vhost
-#   lineinfile:
-#     dest: /etc/nginx/nginx.conf
-#     insertbefore: "# passenger_ruby"
-#     line: "\tpassenger_ruby {{ rvm1_install_path }}/gems/{{ rvm1_rubies.0 }}/wrappers/ruby;"
-#   notify: nginx restart
-
-# - name: Increase max size for uploaded files
-#   lineinfile:
-#     dest: /etc/nginx/nginx.conf
-#     insertafter: 'types_hash_max_size'
-#     line: "\tclient_max_body_size 100M;"
-#   notify: nginx restart
