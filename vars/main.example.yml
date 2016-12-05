@@ -2,7 +2,7 @@
 #
 # Default
 # =========
-user: deploy
+user: deployer
 user_home_directory: '/home/{{ user }}'
 
 #
@@ -27,9 +27,8 @@ users:
 # Nginx
 nginx_ppa_use: true
 nginx_ppa_version: stable # 1.10.1
-
-# Passenger
-passenger_webserver: nginx
+nginx_use_custom_root_html: true
+nginx_custom_root_template: 'default'
 
 #
 # RVM and Ruby
@@ -135,10 +134,10 @@ backup_manager_conf:
   bm_frequency: daily # hourly / monthly / weekly
   bm_archive_ttl: 14
   bm_upload_method: ftp
-  bm_upload_destination: /var/backups
-  bm_upload_ftp_user: user
-  bm_upload_ftp_password: password
-  bm_upload_ftp_hosts: host
+  bm_upload_destination: /var/archives
+  bm_upload_ftp_user: my_user
+  bm_upload_ftp_password: my_password
+  bm_upload_ftp_hosts: my_host
 
 #
 # Htpasswd [Security]

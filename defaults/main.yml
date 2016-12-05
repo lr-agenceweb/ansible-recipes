@@ -1,10 +1,14 @@
 ---
-user: deploy
+user: deployer
+
+# Nginx
+nginx_use_custom_root_html: true
+nginx_custom_root_template: 'default'
 
 #
 # Databases
 # ===========
-database_management: true
+database_management: 'adminer'
 adminer_theme: pappu687
 
 # Fail2ban [Security]
